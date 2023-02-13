@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { AddTodoAction, RemoveTodoAction } from "./actions/TodoActions";
+
 import './App.css';
 
 function App() {
@@ -18,8 +19,6 @@ function App() {
   const removeHandler = (t) => {
     dispatch(RemoveTodoAction(t));
   };
-
-
   return (
     <div className="App">
       <header className="App-header">
@@ -62,6 +61,16 @@ function App() {
           </li>
             ))
           }
+          {/* {
+            data.splice(0,20).map((item)=>
+            <li>
+              {item.userId},
+              {item.id},
+              {item.title}
+              {item.completed}
+            </li>
+            )
+          } */}
         </ul>
       </header>
     </div>
